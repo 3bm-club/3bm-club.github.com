@@ -13,7 +13,7 @@
 		text-align: center;
 	}
 	.posts{
-		text-align: center;
+		margin-left: 20%;
 	}
 	.but{
 		text-decoration: none;
@@ -46,10 +46,10 @@
 	}
 	.pos{
 		margin-top: 50px;
-	}
-	.pos iframe{
 		border-left: 4px double #c3ffed;
-		border-right: 4px double #c3ffed;		
+		border-right: 4px double #c3ffed;
+		width: 80%;
+		text-align: left;
 	}
 	hr{
 		color: #c3ffed;
