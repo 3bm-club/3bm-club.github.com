@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>Reverse leason1</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+<iframe src="../menu.html" width="100%" height="230" align="center"  scrolling="no" frameborder="0" framespacing="0">
+</iframe>
+Здравствуйте мои маленькие любители приключений. Сегодня я расскажу вам как решать реверс с CSAW CTF. Начнём мы с реверса 100. Скачиваем файл DotNetReversing.exe и по 
+названию файла видим что он .Net приложуха. Если бы файл назывался как-то по другому, открыв его IDA PRO мы бы увидели, что это .Net, так как IDA пишет какой файл она 
+дизасемблирует. Так как приложение написано на C# для .Net, мы просто можем декомпилировать его. Так как VS у меня не установлена и ReSharp тем более, я скачал себе 
+.NET Reflector 8.2. Декомпилируем наш файл, просто перетащив его на ярлык декомпилятора. И видим там такие строки:
+<div class="code">
+<p>
+long num = Convert.ToInt64(Console.ReadLine());<br>
+long num2 = 0xc5ec4d790L;<br>
+long num3 = 0xf423abdb7L;<br>
+if ((num ^ num2) == num3)<br>
+{<br>
+Console.WriteLine("yay");<br>
+}<br>
+else<br>
+{<br>
+Console.WriteLine("Incorrect, try again!");<br>
+}<br>
+</p>
+</div>
+Тут проверка на правильность ключа, причём самая простая, которую вообще можно придумать. 
+^ - это не няшный глазик, это XOR(исключающие или), и она обратна сама себе, поэтому чтобы узнать num,
+надо сделать XOR значений в num3 и num2 любым доступным способом. Ну, в общем, готово. Теперь вводим 
+получившееся значение в прогу и она радостно отдаёт нам flag. Кстати, в коде преписка 0x означает что у числа 
+16-ричное представление, а в качестви ключа нужно вводить 10-тичное.
+<br>
+<img src="https://pp.vk.me/c417422/v417422945/4bd6/6JSIKdSd07w.jpg"></img>
+<img src="https://pp.vk.me/c417422/v417422945/4be0/1VirZ1Vqqj4.jpg"></img>
+<img src="https://pp.vk.me/c417422/v417422945/4bea/G2MEmXyuCoQ.jpg"></img>
+</body>
+</html>

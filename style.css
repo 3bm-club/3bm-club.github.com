@@ -1,0 +1,56 @@
+	body {
+		background: url(image/fon.png) no-repeat #fff;
+	}   
+   .head{ 
+		text-align: center;
+		font-size: 50pt;
+    }
+	.bkt{
+		color: #bbe3ff;
+		font-size: 60pt;
+	}
+	.menu{
+		text-align: center;
+	}
+	.posts{
+		text-align: center;
+	}
+	.but{
+		text-decoration: none;
+		color: blue;
+		font-size: 20pt;
+		margin-right:50px;
+		margin-left:50px;
+		text-decoration: underline; 
+	}
+	.but:hover{
+		text-decoration: none;
+		color: blue;
+	}
+	.LH{
+		font-size: 20pt;
+		text-decoration: none;
+		color: blue;
+	}
+	.LH:hover{
+		text-decoration: underline; 
+		color: blue;
+		background: #f7ffff;
+	}
+	.code{
+		background: d6fdfc;
+		color: 000e38;
+	}
+	.news{
+		font-size: 20pt;
+	}
+	.pos{
+		margin-top: 50px;
+	}
+	.pos iframe{
+		border-left: 4px double #c3ffed;
+		border-right: 4px double #c3ffed;		
+	}
+	hr{
+		color: #c3ffed;
+	}
