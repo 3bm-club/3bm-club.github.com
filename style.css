@@ -11,6 +11,27 @@
 	}
 	.menu{
 		text-align: center;
+		width: 50%;
+		height: 55px;
+		margin-left: 25%;
+		padding-top: 5px;
+			background-color: #3E9ED6;
+	background-image: -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		color-stop(0, rgb(112,181,242)),
+		color-stop(0.49, rgb(84,164,238)),
+		color-stop(0.5, rgb(54,144,240)),
+		color-stop(1, rgb(26,97,219))
+	);
+	background-image: -moz-linear-gradient(
+		center top,
+		rgb(112,181,242) 0%,
+		rgb(84,164,238) 49%,
+		rgb(54,144,240) 50%,
+		rgb(26,97,219) 100%
+	);
 	}
 	.posts{
 		margin-left: 30%;
