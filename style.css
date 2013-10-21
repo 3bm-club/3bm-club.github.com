@@ -52,8 +52,8 @@
 	}
 	.pos{
 		margin-top: 50px;
-		border-left: 4px double #c3ffed;
-		border-right: 4px double #c3ffed;
+		border: 1px solid gray;
+		padding-left: 10px;
 		width: 60%;
 		text-align: left;
 	}
