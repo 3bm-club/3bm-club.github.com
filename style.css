@@ -3,17 +3,17 @@
 	}   
    .head{ 
 		text-align: center;
-		font-size: 50pt;
+		font-size: 30pt;
     }
 	.bkt{
 		color: #bbe3ff;
-		font-size: 60pt;
+		font-size: 40pt;
 	}
 	.menu{
 		text-align: center;
 	}
 	.posts{
-		margin-left: 20%;
+		margin-left: 30%;
 	}
 	.but{
 		text-decoration: none;
@@ -48,7 +48,7 @@
 		margin-top: 50px;
 		border-left: 4px double #c3ffed;
 		border-right: 4px double #c3ffed;
-		width: 80%;
+		width: 60%;
 		text-align: left;
 	}
 	hr{
