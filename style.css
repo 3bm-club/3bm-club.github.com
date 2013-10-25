@@ -2,6 +2,7 @@
    .head{ 
 		text-align: center;
 		font-size: 30pt;
+		font-family: Impact;
     }
 	.bkt{
 		color: blue;
@@ -23,20 +24,20 @@
 	}
 	.but{
 		text-decoration: none;
-		color: blue;
+		color: purple;
 		font-size: 20pt;
 		margin-right:50px;
 		margin-left:50px;
-		text-decoration: underline; 
+		text-decoration: none; 
 	}
 	.but:hover{
 		text-decoration: none;
-		color: blue;
+		color: purple;
 	}
 	.LH{
 		font-size: 25pt;
 		text-decoration: none;
-		color: blue;
+		color: purple;
 	}
 	.code{
 		background: d6fdfc;
