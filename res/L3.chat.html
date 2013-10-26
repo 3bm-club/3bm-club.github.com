@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<form id="msg_form">
+			<textarea rows="5" cols="40"></textarea><br>
+			<input type="submit">
+		</form>
+		<div id="msg_box"></div>
+
+		<script src="js/jquery-2.0.3.js"></script><!-- Подключение библиотеки jQuery -->
+		<script>
+			// Данный код написан исключительно в ознакомаительных целях.
+			// Если Вы пишите в подобном стиле знайте,
+			// что ВСЁ ОЧЕНЬ ПЛОХО
+
+			$(document).ready(
+				function() { // Назначить действие на событие "ready" для объекта "document"
+					var lastid = "-1"; // Создать переменню lastid и записать в неё строку "-1"
+
+					var username = prompt("Ваше имя:",""); // Вызов функции prompt, которая "создаст" модальное окно с полем для ввода.
+
+					$("#msg_form").submit(
+						function(){
+							var message = $("#msg_form > textarea").val(); // Получить сожержимое тега "textarea", лежащего внутри контейнера с идентификатором "msg_form"
+							$("#msg_form > textarea").val(""); // Очистить сожержимое тега "textarea", лежащего внутри контейнера с идентификатором "msg_form"
+							$.post( // Асинхронно отправить данные методом POST
+								"index.php", // Куда отправляем
+								{ // Что отправляем
+									"insert": "insert",
+									"username" : username,
+									"message" : message
+								}
+							);
+							return false; // Необходимо, для того чтобы убрать стандартные действия для события "submit"
+						}
+					);
+
+					setInterval( // Таймер. Вызывает функцию, с заданным интервалом
+						function() {
+							$.post(
+								"index.php", // Куда отправляем
+								{ // Что отправляем
+									"update" : "update",
+									"lastid" : lastid
+								},
+								function(data) { // Что делаем, с полученными данными
+									var new_data = $.parseJSON(data); // Преобразуем строку формата JSON в JavaScript объект
+									lastid = new_data.lastid; // Обращаемся к полю объекта, полученного ранее
+									for(var i = 0; i < new_data.messages.length; i++) 
+									{
+										$("#msg_box").prepend("<p><b>" + new_data.messages[i].username + "</b> : " + new_data.messages[i].message + "</p>"); // Пишем в начало контейнера с идентификатором msg_box полученные данные
+									}
+								}
+							)
+						},
+						500 // Интервал в миллисекундах
+					);
+				}
+			);
+		</script>
+
+	</body>
+</html>
