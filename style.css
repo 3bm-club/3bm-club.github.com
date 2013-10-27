@@ -9,18 +9,13 @@
 		font-size: 40pt;
 	}
 	.menu{
-		border-radius: 10px;
-		-moz-border-radius: 10px;
-		-webkit-border-radius: 10px; 
-  
 		text-align: center;
-		width: 50%;
+		width: 800px;
 		height: 55px;
-		margin-left: 25%;
 		padding-top: 5px;
 	}
-	.posts{
-		margin-left: 28%;
+	.content{
+		width: 900px;
 	}
 	.but{
 		text-decoration: none;
